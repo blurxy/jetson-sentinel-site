@@ -136,6 +136,8 @@
   .card .ico{width:38px;height:38px;border:1px solid var(--border-2);border-radius:9px;display:grid;place-items:center;background:var(--panel-2)}
   .card h3{font-size:17px;font-weight:600;margin:4px 0 0}
   .card p{color:var(--fg-2);font-size:14px;margin:0;line-height:1.6}
+  .deploy-close{margin-top:38px;font-size:clamp(21px,2.5vw,28px);font-weight:600;letter-spacing:-.01em;color:var(--fg-2);max-width:34ch;text-wrap:balance}
+  .deploy-close b{color:var(--accent);font-weight:600}
 
   /* split (appliance / vs cloud) */
   .split{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;margin-top:10px}
@@ -321,6 +323,32 @@
         <p>Produces an evidence-linked report — every finding references the sealed artifact that proves it, ready to hand off.</p>
       </div>
     </div>
+  </section>
+
+  <section id="deploy" class="wrap sec">
+    <div class="sec-head">
+      <div class="eyebrow">Deploy</div>
+      <h2>Plug it in. That's the setup.</h2>
+      <p>No agent to install, no console to babysit, no cloud account to wire up. Connect power, plug the ethernet into the network you're authorized to test, and Sentinel takes it from there.</p>
+    </div>
+    <div class="feat">
+      <div class="card">
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5v6" stroke="#B7FF5A" stroke-width="1.6" stroke-linecap="round"/><path d="M4.8 5.2a5.5 5.5 0 1 0 8.4 0" stroke="#B7FF5A" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>Connect power</h3>
+        <p>The appliance boots straight into its engagement runtime — no imaging, no setup wizard, no OS to configure.</p>
+      </div>
+      <div class="card">
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="3" y="6" width="12" height="7.5" rx="1.3" stroke="#B7FF5A" stroke-width="1.5"/><path d="M6.5 6V4h5v2" stroke="#B7FF5A" stroke-width="1.5"/><path d="M6 9.3h.01M8 9.3h.01M10 9.3h.01M12 9.3h.01" stroke="#B7FF5A" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>Plug into the network</h3>
+        <p>One ethernet cable into the network you're cleared to test. No agents to deploy, no credentials to pre-stage.</p>
+      </div>
+      <div class="card">
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3.5 9.5l3.3 3.3L14.5 5" stroke="#B7FF5A" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Walk away</h3>
+        <p>Sentinel runs the engagement end to end and seals the evidence. Come back to a report, not a task list.</p>
+      </div>
+    </div>
+    <p class="deploy-close">The hard, grinding work is handled — you keep the part that's actually <b>fun.</b></p>
   </section>
 
   <section id="platform" class="wrap sec">
