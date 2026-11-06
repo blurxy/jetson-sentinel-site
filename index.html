@@ -171,6 +171,13 @@
   .cta p{color:var(--fg-2);font-size:17px;margin:18px auto 0;max-width:48ch}
   .cta .cta-row{justify-content:center;margin-top:30px}
   .cta .note{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:22px;letter-spacing:.03em}
+  .access-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:30px auto 0;max-width:520px}
+  .access-form input[type=email]{flex:1;min-width:230px;background:var(--panel);border:1px solid var(--border-2);border-radius:7px;color:var(--fg);font:15px var(--sans);padding:13px 15px}
+  .access-form input[type=email]::placeholder{color:var(--muted)}
+  .access-form input[type=email]:focus{outline:none;border-color:var(--accent-dim);box-shadow:0 0 0 3px rgba(183,255,90,.12)}
+  .access-form .btn{white-space:nowrap}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  @media(max-width:480px){.access-form .btn{width:100%;justify-content:center}}
 
   /* footer */
   footer{border-top:1px solid var(--border);padding-block:40px 48px}
@@ -410,10 +417,13 @@
     <div class="eyebrow">Early access</div>
     <h2>See the exposure <span class="g">before an attacker does.</span></h2>
     <p>Jetson Sentinel is in private development. Request early access and we'll be in touch about the appliance and a scoped trial.</p>
-    <div class="cta-row">
-      <a class="btn" href="#access">Request access <span aria-hidden="true">↗</span></a>
-      <a class="link" href="#how">See how it works →</a>
-    </div>
+    <form class="access-form" action="https://formspree.io/f/mpppneez" method="POST">
+      <input type="email" name="email" required placeholder="you@company.com" aria-label="Your work email">
+      <input type="hidden" name="_subject" value="Jetson Sentinel — early-access request">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+      <button type="submit" class="btn">Request access <span aria-hidden="true">↗</span></button>
+    </form>
+    <div style="margin-top:18px"><a class="link" href="#how">See how it works →</a></div>
     <div class="note">Authorized testing only · You bring the scope, Sentinel brings the proof</div>
   </section>
 </main>
